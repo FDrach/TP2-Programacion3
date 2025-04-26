@@ -2,12 +2,16 @@ import React from "react";
 
 const Nosotros = (props) => {
   const { listaIntegrantes } = props;
-
+  const defaultImg = "https://avatars.githubusercontent.com/github";
   return (
     <div className="integrantes-grid">
       {listaIntegrantes.map((integrante) => (
         <div key={integrante.legajo} className="integrante-card">
-          <img src={integrante.foto} alt={`Foto de ${integrante.nombre}`} />
+          <img
+            src={integrante.foto}
+            alt={`Foto de ${integrante.nombre}`}
+            onError={(e) => { e.target.onerror = null; e.target.src = defaultImg }}
+          />
           <h4>
             {integrante.nombre} {integrante.apellido}
           </h4>
