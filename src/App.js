@@ -1,9 +1,9 @@
 /*
 Franco Eduardo Drachenberg - 61236
-Said Ghisaura - 00000
-Cristian Ballespin - 00000
-Ignacio Diaz Valdez - 00000
-Martin Alvarez - 00000
+Said Ghisaura - 61584
+Cristian Ballespin - 62171
+Ignacio Diaz Valdez - 61551
+Martin Alvarez - 61984
 */
 
 import React, { useState } from "react"; // Import useState
@@ -21,30 +21,30 @@ const integrantes = [
   {
     nombre: "Said",
     apellido: "Ghisaura",
-    legajo: "00001",
-    github: "https://github.com/sghisaura",
-    foto: "https://avatars.githubusercontent.com/github",
+    legajo: "61584",
+    github: "https://github.com/SaidJG22",
+    foto: "https://avatars.githubusercontent.com/SaidJG22",
   },
   {
     nombre: "Cristian",
     apellido: "Ballespin",
-    legajo: "00002",
-    github: "https://github.com/cballespin",
-    foto: "https://avatars.githubusercontent.com/github",
+    legajo: "62171",
+    github: "https://github.com/CrisBallespin15",
+    foto: "https://avatars.githubusercontent.com/CrisBallespin15",
   },
   {
     nombre: "Ignacio",
     apellido: "Diaz Valdez",
-    legajo: "00003",
-    github: "https://github.com/idiazvaldez",
-    foto: "https://avatars.githubusercontent.com/github",
+    legajo: "61551",
+    github: "https://github.com/IgnacioDiazV",
+    foto: "https://avatars.githubusercontent.com/IgnacioDiazV",
   },
   {
     nombre: "Martin",
     apellido: "Alvarez",
-    legajo: "00004",
-    github: "https://github.com/AA-Martin07",
-    foto: "https://avatars.githubusercontent.com/AA-Martin07",
+    legajo: "61984",
+    github: "https://github.com/martin0192",
+    foto: "https://avatars.githubusercontent.com/martin0192",
   },
 ];
 
