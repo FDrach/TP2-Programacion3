@@ -11,7 +11,7 @@ const HomePages = ({ integrantesData, onAddIntegrante }) => {
         integrantesData={integrantesData}
         onAddIntegrante={onAddIntegrante}
       />
-      <Footer />
+      <Footer integrantesData={integrantesData} />
     </div>
   );
 };
