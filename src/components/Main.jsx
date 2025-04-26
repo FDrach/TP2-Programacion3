@@ -1,11 +1,13 @@
-import React from 'react'
-
-const Main = () => {
+import React from "react";
+import Nosotros from "./Nosotros.jsx";
+const Main = (props) => {
+  const { integrantesData } = props;
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <main>
+      <Nosotros listaIntegrantes={integrantesData} />
+      <hr />
+    </main>
+  );
+};
 
-export default Main
+export default Main;
