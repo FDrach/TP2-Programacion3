@@ -8,7 +8,9 @@ Martin Alvarez - 61984
 
 import React, { useState } from "react"; // Import useState
 import "./styles/App.css";
-import HomePages from "./pages/HomePages.jsx";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import AppRouter from "./components/AppRouter.jsx";
 
 const integrantes = [
   {
@@ -56,10 +58,12 @@ function App() {
 
   return (
     <div className="App">
-      <HomePages
+      <Header />
+      <AppRouter
         integrantesData={integrantesData}
         onAddIntegrante={addIntegrante}
       />
+      <Footer integrantesData={integrantesData} />
     </div>
   );
 }
