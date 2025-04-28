@@ -25,7 +25,15 @@ const AppRouter = ({ integrantesData, onAddIntegrante }) => {
         />
       );
     } else {
-      return <PageComponent />;
+      try {
+        return (
+          <PageComponent
+            integrantesData={integrantesData}
+          />
+        );
+      } catch (error) {
+        <PageComponent />;
+      }
     }
   } else {
     return (
