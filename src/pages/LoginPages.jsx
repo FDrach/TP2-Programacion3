@@ -7,20 +7,37 @@ const LoginPages = ({ logueado, setLogueado }) => {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [bienvenida, setBienvenida] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (usuario === UAdmin && password === CAdmin) {
       setLogueado(true);
       setError("");
+      setBienvenida(true);
+      setTimeout(() => {
+        setBienvenida(false);
+        window.location.href = "/home";
+      }, 2000); // 2 segundos
     } else {
       setError("Usuario o contraseña incorrectos");
       setLogueado(false);
     }
   };
 
+  if (logueado && bienvenida) {
+    return (
+      <div className="login-container">
+        <div className="login-form-box">
+          <h2>¡Bienvenido, {usuario}!</h2>
+          <p>Redirigiendo al inicio...</p>
+        </div>
+      </div>
+    );
+  }
+
   if (logueado) {
-    window.location.href = "/";
+    window.location.href = "/home";
     return null;
   }
 
