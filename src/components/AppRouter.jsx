@@ -17,7 +17,7 @@ const AppRouter = ({ integrantesData, onAddIntegrante }) => {
   const PageComponent = routeConfig[currentPath];
 
   if (PageComponent) {
-    if (currentPath === "/" || currentPath === "/home") { // Manejo de Home
+    if (currentPath === "/" || currentPath === "/home") { 
       return (
         <PageComponent
           integrantesData={integrantesData}
