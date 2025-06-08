@@ -44,6 +44,7 @@ hr {
 
 /* Header */
 .app-header {
+  position: relative;
   background-color: #282c34;
   padding: 15px 30px;
   color: white;
@@ -64,7 +65,9 @@ hr {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Espaciado uniforme entre todos */
+  justify-content: center; /* O flex-end si quieres todo a la derecha */
+  align-items: center;
 }
 
 .main-nav .nav-item {
@@ -263,4 +266,20 @@ form button[type="submit"]:focus {
   margin-top: 20px;
   font-size: 0.9em;
   color: #6c757d;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+  background: #c0392b;
 }

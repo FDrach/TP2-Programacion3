@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 
-const USUARIO_PRUEBA = "admin";
-const PASSWORD_PRUEBA = "1234";
+const UAdmin = "admin";
+const CAdmin = "1234";
 
-const LoginPages = () => {
+const LoginPages = ({ logueado, setLogueado }) => {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [logueado, setLogueado] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (usuario === USUARIO_PRUEBA && password === PASSWORD_PRUEBA) {
+    if (usuario === UAdmin && password === CAdmin) {
       setLogueado(true);
       setError("");
     } else {
@@ -20,13 +19,16 @@ const LoginPages = () => {
     }
   };
 
+  const handleLogout = () => {
+    setLogueado(false);
+    setUsuario("");
+    setPassword("");
+  };
+
   if (logueado) {
-    return (
-      <div>
-        <h2>¡Bienvenido, {usuario}!</h2>
-        <p>Has iniciado sesión correctamente.</p>
-      </div>
-    );
+    // Puedes redirigir al home o mostrar un mensaje, pero NO el botón de logout
+    window.location.href = "/";
+    return null;
   }
 
   return (

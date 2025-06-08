@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Nosotros from "../components/Nosotros.jsx";
 
-const NosotrosPages = ({ integrantesData, onAddIntegrante }) => {
+const NosotrosPages = ({ integrantesData, onAddIntegrante, logueado }) => {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [legajo, setLegajo] = useState("");
@@ -43,11 +43,13 @@ const NosotrosPages = ({ integrantesData, onAddIntegrante }) => {
       <h2>Nuestro Equipo</h2>
       <Nosotros listaIntegrantes={integrantesData} />
 
-      <button onClick={() => setMostrarFormulario(!mostrarFormulario)}>
-        {mostrarFormulario ? "Cancelar" : "Agregar Integrante"}
-      </button>
+      {logueado && (
+        <button onClick={() => setMostrarFormulario(!mostrarFormulario)}>
+          {mostrarFormulario ? "Cancelar" : "Agregar Integrante"}
+        </button>
+      )}
 
-      {mostrarFormulario && (
+      {mostrarFormulario && logueado && (
         <div>
           <h3>Agregar Nuevo Integrante</h3>
           <form onSubmit={handleSubmit}>

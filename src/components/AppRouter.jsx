@@ -12,7 +12,7 @@ const routeConfig = {
   "/view": ViewPages,
 };
 
-const AppRouter = ({ integrantesData, onAddIntegrante }) => {
+const AppRouter = ({ integrantesData, onAddIntegrante, logueado, setLogueado }) => {
   const currentPath = window.location.pathname.toLowerCase();
   const PageComponent = routeConfig[currentPath];
 
@@ -24,16 +24,27 @@ const AppRouter = ({ integrantesData, onAddIntegrante }) => {
           onAddIntegrante={onAddIntegrante}
         />
       );
+    } else if (currentPath === "/login") {
+      return (
+        <LoginPages
+          logueado={logueado}
+          setLogueado={setLogueado}
+        />
+      );
+    } else if (currentPath === "/nosotros") {
+      return (
+        <NosotrosPages
+          integrantesData={integrantesData}
+          onAddIntegrante={onAddIntegrante}
+          logueado={logueado}
+        />
+      );
     } else {
-      try {
-        return (
-          <PageComponent
-            integrantesData={integrantesData}
-          />
-        );
-      } catch (error) {
-        <PageComponent />;
-      }
+      return (
+        <PageComponent
+          integrantesData={integrantesData}
+        />
+      );
     }
   } else {
     return (
