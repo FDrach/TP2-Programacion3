@@ -19,21 +19,15 @@ const LoginPages = ({ logueado, setLogueado }) => {
     }
   };
 
-  const handleLogout = () => {
-    setLogueado(false);
-    setUsuario("");
-    setPassword("");
-  };
-
   if (logueado) {
     window.location.href = "/";
     return null;
   }
 
   return (
-    <main>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+    <div className="login-container">
+      <form className="login-form-box" onSubmit={handleSubmit}>
+        <h2>Login</h2>
         <div>
           <label htmlFor="usuario">Usuario:</label>
           <input
@@ -54,10 +48,10 @@ const LoginPages = ({ logueado, setLogueado }) => {
             required
           />
         </div>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
         <button type="submit">Iniciar sesión</button>
       </form>
-    </main>
+    </div>
   );
 };
 

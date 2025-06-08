@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Nosotros from "../components/Nosotros.jsx";
 
-const NosotrosPages = ({ integrantesData, logueado, setLogueado }) => {
+const NosotrosPages = ({ integrantesData, logueado }) => {
   const [integrantes, setIntegrantes] = useState(integrantesData);
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [nombre, setNombre] = useState("");
@@ -40,8 +40,7 @@ const NosotrosPages = ({ integrantesData, logueado, setLogueado }) => {
   };
 
   const handleEliminarIntegrante = (legajo) => {
-    const confirmar = window.confirm("¿Estás seguro de que deseas eliminar este integrante?");
-    if (confirmar) {
+    if (window.confirm("¿Estás seguro de que deseas eliminar este integrante?")) {
       setIntegrantes((prev) => prev.filter((i) => i.legajo !== legajo));
     }
   };
@@ -144,17 +143,6 @@ const NosotrosPages = ({ integrantesData, logueado, setLogueado }) => {
           )}
         </div>
       )}
-
-      <button
-        className="logout-btn"
-        onClick={() => {
-          if (window.confirm("¿Estás seguro de que deseas cerrar sesión?")) {
-            setLogueado(false);
-          }
-        }}
-      >
-        Cerrar sesión
-      </button>
     </main>
   );
 };

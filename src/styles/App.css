@@ -65,13 +65,9 @@ hr {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px; /* Espaciado uniforme entre todos */
-  justify-content: center; /* O flex-end si quieres todo a la derecha */
+  gap: 20px;
+  justify-content: center;
   align-items: center;
-}
-
-.main-nav .nav-item {
- 
 }
 
 .main-nav .nav-link {
@@ -80,12 +76,11 @@ hr {
   font-size: 1.1em;
   padding: 5px 10px;
   border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .main-nav .nav-link:hover,
 .main-nav .nav-link:focus {
- 
   background-color: #61dafb;
   color: #282c34;
   outline: none;
@@ -106,9 +101,9 @@ hr {
   border-radius: 8px;
   width: 220px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s;
   position: relative;
 }
 
@@ -146,13 +141,13 @@ hr {
   padding: 5px 10px;
   border: 1px solid #007bff;
   border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .integrante-card a:hover,
 .integrante-card a:focus {
   background-color: #007bff;
-  color: white;
+  color: #fff;
   text-decoration: none;
   outline: none;
 }
@@ -184,7 +179,7 @@ hr {
   outline: none;
 }
 
-/* Form */
+/* Formulario */
 form {
   display: flex;
   flex-direction: column;
@@ -230,12 +225,12 @@ form input[type="url"]:focus {
 form button[type="submit"] {
   padding: 10px 15px;
   background-color: #28a745;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1.1em;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s;
   align-self: center;
   min-width: 150px;
 }
@@ -287,14 +282,14 @@ form button[type="submit"]:focus {
   outline: none;
 }
 
-/* Nueva animación para el contenedor del formulario */
+/* Animación formulario */
 .form-container-anim {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   transform: translateY(-60px) scale(0.98);
   filter: blur(2px);
-  transition: 
+  transition:
     opacity 0.6s cubic-bezier(0.4,0,0.2,1),
     max-height 0.6s cubic-bezier(0.4,0,0.2,1),
     transform 0.6s cubic-bezier(0.4,0,0.2,1),
@@ -336,19 +331,15 @@ form button[type="submit"]:focus {
   gap: 15px 25px;
 }
 
-.app-footer .member-link-item {
- 
-}
-
 .app-footer .member-link {
   color: #adb5bd;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s;
 }
 
 .app-footer .member-link:hover,
 .app-footer .member-link:focus {
-  color: #ffffff;
+  color: #fff;
   text-decoration: underline;
   outline: none;
 }
@@ -359,6 +350,7 @@ form button[type="submit"]:focus {
   color: #6c757d;
 }
 
+/* Botones */
 .logout-btn {
   background: #e74c3c;
   color: #fff;
@@ -394,4 +386,70 @@ form button[type="submit"]:focus {
   background-color: #0056b3;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   outline: none;
+}
+
+/* Login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.login-form-box {
+  background: #fff;
+  padding: 40px 32px 32px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form-box h2 {
+  margin-bottom: 24px;
+  color: #2c3e50;
+  font-size: 2em;
+  text-align: center;
+}
+
+.login-form-box label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.login-form-box input[type="text"],
+.login-form-box input[type="password"] {
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 18px;
+  width: 100%;
+  background: #f8fafb;
+  transition: border 0.2s;
+}
+
+.login-form-box input[type="text"]:focus,
+.login-form-box input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-form-box button[type="submit"] {
+  width: 100%;
+  padding: 12px 0;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.login-form-box button[type="submit"]:hover {
+  background: #218838;
 }
