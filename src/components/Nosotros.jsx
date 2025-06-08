@@ -1,12 +1,21 @@
 import React from "react";
 
 const Nosotros = (props) => {
-  const { listaIntegrantes } = props;
+  const { listaIntegrantes, onEliminarIntegrante } = props;
   const defaultImg = "https://avatars.githubusercontent.com/github";
   return (
     <div className="integrantes-grid">
       {listaIntegrantes.map((integrante) => (
         <div key={integrante.legajo} className="integrante-card">
+          {onEliminarIntegrante && (
+            <button
+              className="eliminar-x"
+              onClick={() => onEliminarIntegrante(integrante.legajo)}
+              title="Eliminar integrante"
+            >
+              ×
+            </button>
+          )}
           <img
             src={integrante.foto}
             alt={`Foto de ${integrante.nombre}`}

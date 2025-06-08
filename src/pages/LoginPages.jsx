@@ -26,7 +26,6 @@ const LoginPages = ({ logueado, setLogueado }) => {
   };
 
   if (logueado) {
-    // Puedes redirigir al home o mostrar un mensaje, pero NO el botón de logout
     window.location.href = "/";
     return null;
   }
