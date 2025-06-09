@@ -6,7 +6,7 @@ Ignacio Diaz Valdez - 61551
 Martin Alvarez - 61984
 */
 
-import React, { useState } from "react"; // Import useState
+import React, { useState, useEffect } from "react";
 import "./styles/App.css";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -52,16 +52,31 @@ const integrantes = [
 
 function App() {
   const [integrantesData, setIntegrantes] = useState(integrantes);
+
+  // Persistencia del login
+  const [logueado, setLogueadoState] = useState(() => {
+    return localStorage.getItem("logueado") === "true";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("logueado", logueado);
+  }, [logueado]);
+
+  // Para pasar a los hijos
+  const setLogueado = (valor) => setLogueadoState(valor);
+
   const addIntegrante = (nuevoIntegrante) => {
     setIntegrantes((prevIntegrantes) => [...prevIntegrantes, nuevoIntegrante]);
   };
 
   return (
     <div className="App">
-      <Header />
+      <Header logueado={logueado} setLogueado={setLogueado} />
       <AppRouter
         integrantesData={integrantesData}
         onAddIntegrante={addIntegrante}
+        logueado={logueado}
+        setLogueado={setLogueado}
       />
       <Footer integrantesData={integrantesData} />
     </div>
