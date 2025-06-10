@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+Trabajo Práctico N.º 2 – Programación 3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Año: 2025
 
-## Available Scripts
+Profesor: Matías Sebastián Chocobar
 
-In the project directory, you can run:
+Carrera: Tecnicatura Universitaria en Programación
 
-### `npm start`
+Tema: Sitio de Presentación Grupal con React JS + Git y GitHub colaborativo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Objetivos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Profundizar el uso de componentes React con estructura padre-hijo.
 
-### `npm test`
+Aplicar useState, props, arrays de objetos y métodos de renderizado dinámico como .map().
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Fomentar el trabajo colaborativo mediante el uso de Git y GitHub.
 
-### `npm run build`
+Practicar la creación de formularios en React para manipulación de datos.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Consigna
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El presente trabajo práctico deberá ser realizado forma grupal.
+Cada grupo desarrollará una página web de presentación grupal utilizando React JS.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Requisitos Generales
 
-### `npm run eject`
+Grupal: Cada integrante deberá subir el proyecto completo a su propio repositorio GitHub.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Un solo integrante enviará por mail al profesor el link al repositorio compartido.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+En el archivo App.js, al inicio del componente, se debe incluir un comentario con:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Nombre completo y legajo de todos los integrantes del grupo.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Estructura del Proyecto
 
-## Learn More
+src/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+components/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Header.jsx
 
-### Code Splitting
+Main.jsx
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Footer.jsx
 
-### Analyzing the Bundle Size
+Nosotros.jsx
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+View.jsx
 
-### Making a Progressive Web App
+pages/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+HomePages.jsx
 
-### Advanced Configuration
+LoginPages.jsx
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+NosotrosPages.jsx
 
-### Deployment
+ViewPages.jsx
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+App.js
 
-### `npm run build` fails to minify
+index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+styles/
+
+App.css
+
+Funcionalidad
+Componente Principal: App.js
+
+Declarar un array de objetos, cada uno representando un integrante del grupo:
+
+{
+  nombre: "Juan",
+  apellido: "Pérez",
+  legajo: "12345",
+  github: "https://github.com/juanperez",
+  foto: "url_foto"
+}
+
+
+Este array se debe pasar como prop al componente Main.
+
+Componente Main.jsx
+
+Debe desestructurar las props recibidas.
+
+Debe pasar el array de integrantes como prop al componente Nosotros.
+
+Además, incluir un formulario para agregar un nuevo integrante (nuevo objeto) al array.
+
+Componente Nosotros.jsx
+
+Recibe el array y lo recorre con .map() para mostrar:
+
+Foto
+
+Nombre completo
+
+Legajo
+
+Link a su GitHub
+
+Componentes adicionales
+
+Header.jsx: Encabezado con título y navegación.
+
+Footer.jsx: Enlaces o datos de contacto.
+
+View.jsx: Puede servir para ver detalle de algún integrante (opcional).
+
+Las páginas HomePages, NosotrosPages, etc., deben renderizar los componentes anteriores.
+
+Tecnologías y Técnicas
+
+React con Create React App (CRA).
+
+Componentes funcionales.
+
+useState, spread operator, props, .map(), arrays y objetos.
+
+Git y GitHub: mínimo 5 commits significativos por integrante.
+
+Uso de rama secundaria al menos una vez durante el desarrollo.
+
+Estética
+
+El proyecto debe tener una apariencia visual cuidada, clara y agradable.
+
+Se pueden utilizar estilos con CSS tradicional.
+
+Se valorará especialmente la creatividad, originalidad en la presentación, y el uso de componentes adicionales o ideas innovadoras que enriquezcan el proyecto. ¡Sean creativos!
+
+Entrega
+
+Cada integrante debe tener su repo individual.
+
+Un solo alumno de cada grupo enviará por mail la URL del repositorio de GitHub antes del: Sábado 26-04-2025 hasta las 18:00 hs.
